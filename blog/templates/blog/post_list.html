@@ -11,17 +11,15 @@
                 <h2>Blog o programowaniu</h2>
                 <h3>Autor : Pawel Prokop</h3>
             </div>
+            {% for post in posts %}
             <div>
-                <p>Prawa zastrzezone</p>
-                <em>Wyrozniony tekst</em></br>
-                <strong>Pogrubiony tekst</strong>
+                <p>opublikowany: {{ post.publish_date }}</p>
+                <h2><a href="">{{ post.title }}</a> </h2>
+                <em>{{ post.text|linebreaksbr }}</em>
             </div>
+            {% endfor %}
             <div>
-                 <ul>
-                     <li>pierwszy element</li>
-                     <li>pierwszy element</li>
-                     <li>pierwszy element</li>
-                 </ul>
+
             </div>
         </body>
     </html>
