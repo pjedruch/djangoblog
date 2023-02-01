@@ -7,9 +7,9 @@
                 {{ post.publish_date  }}
             </div>
         {% endif %}
-     {% if user.is_authenticated %}
+
          <a class="bi bi-pencil" href="{% url 'post_edit' pk=post.pk %}"></a>
-     {% endif %}
+
 
     <h2>{{ post.title }}</h2>
     <p>{{ post.text|linebreaksbr }}</p>
